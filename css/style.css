@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Sketchzone;
+    src: url(/assets/fonts/Sketchzone.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,67 +10,17 @@
 }
 
 p{
-    color: white;
+    color: black;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     word-spacing: 1.5px;
+}
+
+.logo{
+    font-family: Sketchzone;
+    color: rgb(13, 110, 253) !important;
+}
+
+.container .principal{
     text-align: center;
-}
-
-body{
-    background-color: white;
-}
-
-h1{
-    color: orangered;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    margin: 0 0 50px 0;
-}
-
-header{
-    background-color:#C3C5C7);
-    height: 80px;
-    padding: 20px;
-
-}
-
-footer{
-    background-color: #C3C5C7);
-    height: 50px;
-    text-align: center;
-    padding: 10px;
-    clear: both;
-}
-
-#principal{
-    background-image: url(/assets/cidade.jpg);
-    clear: both;
-    background-size: 100%;
-    min-height: 500px;
-    padding: 80px 0 0;
-}
-
-#menu ul li{
-    margin-top: 30px;
-    float: left;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-#menu ul li a{
-    padding: 52px 20px;
-    text-decoration: none;
-    color: #111;
-}
-
-#menu ul li a:hover{
-    background-color: orangered;
-    color: #111;
-}
-
-.container{
-    width: 800px;
-    margin: 0 auto;
-    text-align: justify;
 }
