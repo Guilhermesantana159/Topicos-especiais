@@ -1,6 +1,6 @@
 @font-face {
     font-family: Sketchzone;
-    src: url(/assets/fonts/Sketchzone.otf);
+    src: url(../assets/fonts/Sketchzone.otf);
 }
 
 *{
@@ -64,3 +64,86 @@ p{
     --bs-btn-disabled-bg: #CCF654;
     --bs-btn-disabled-border-color: #CCF654;
 }
+
+
+
+.main-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .login-container {
+    background-color: #fff;
+    padding: 60px 40px 60px 40px;
+    width: 60vh;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 2);
+  }
+
+  .login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Sketchzone;
+  }
+
+  .form-group-login {
+    margin-bottom: 10px;
+  }
+
+  .form-group-login label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group-login input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-group-login button {
+    width: 100%;
+    padding: 8px;
+    background-color: #0400ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  @keyframes animacaoMeia {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .meia {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    animation: animacaoMeia 4s infinite linear;
+  }
+
+  .banner-home{
+    position: absolute;
+  }
+
+  .banner-home h1{
+    font-family: Sketchzone;
+    font-size: 12vh;
+  }
+
+  #pisca-pisca{
+    padding: 20vh 0vh 20vh 0vh;
+  }
+
+  .meia-gira1{
+    background-image: url('../assets/images/meiagira01.png');    
+  }
+
+  .meia-gira2{
+    background-image: url('../assets/images/meiagira02.png');
+  }

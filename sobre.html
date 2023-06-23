@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,38 +10,49 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/x-icon" href="/assets/images/socks.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/images/socks.png">
 </head>
 
-<body>
+<body onload="OnInit()">
     <div class="container">
         <!-- CABEÇALHO -->
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <div class="col-md-3 mb-2 mb-md-0">
-                <a href="/index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    <img src="/assets/images/logo-png.png" alt="Logo" width="93" height="20">
+                <a href="./index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="./assets/images/logo-png.png" alt="Logo" width="93" height="20">
                 </a>
             </div>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/index.html" class="nav-link px-2">Home</a></li>
-                <li><a href="/custom.html" class="nav-link px-2">Custom</a></li>
-                <li><a href="/produtos.html" class="nav-link px-2">Produtos</a></li>
-                <li><a href="/sobre.html" class="nav-link px-2 link-secondary">Sobre</a></li>
+                <li><a href="./index.html" class="nav-link px-2">Home</a></li>
+                <li><a href="./custom.html" class="nav-link px-2">Custom</a></li>
+                <li><a href="./produtos.html" class="nav-link px-2">Produtos</a></li>
+                <li><a href="./sobre.html" class="nav-link px-2 link-secondary">Sobre</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/contatoFab.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="./contatoFab.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Contato
                     </a>
                     <ul class="dropdown-menu dropdown-menu">
-                      <li><a class="dropdown-item" href="/contatoLoja.html">Lojistas</a></li>
-                      <li><a class="dropdown-item" href="/contatoEmp.html">Empresa</a></li>
+                      <li><a class="dropdown-item" href="./contatoLoja.html">Lojistas</a></li>
+                      <li><a class="dropdown-item" href="./contatoEmp.html">Empresa</a></li>
                     </ul>
                 </li>
             </ul>
-            <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Criar conta</button>
+
+            <div class="col-md-3 text-end" id="login">
+                <a href="login.html">
+                    <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                </a>
+                <a href="register.html">
+                    <button type="button" class="btn btn-primary">Criar conta</button>
+                </a>
+            </div>
+            <div class="col-md-3 text-end" id="sair">
+                <a onclick="Deslogar()">
+                    <button type="button" class="btn btn-outline-primary me-2">Sair</button>
+                </a>
             </div>
         </header>
         <!-- CONTEÚDO -->
@@ -74,7 +84,7 @@
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <img class="logo" width="100" height="74" src="/assets/images/logo_Prancheta 1.svg">
+                    <img class="logo" width="100" height="74" src="./assets/images/logo_Prancheta 1.svg">
                         
                     </svg>
                 </a>

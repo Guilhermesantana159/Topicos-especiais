@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,58 +10,139 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" type="image/x-icon" href="/assets/images/socks.png">
+  <script src="./script/script.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/x-icon" href="./assets/images/socks.png">
 </head>
-
-<body>
+<body onload="OnInit()">
   <div class="container">
     <!-- CABEÇALHO -->
     <header
       class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div class="col-md-3 mb-2 mb-md-0">
-        <a href="/index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <img src="/assets/images/logo-png.png" alt="Logo" width="93" height="20">
+        <a href="./index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <img src="./assets/images/logo-png.png" alt="Logo" width="93" height="20">
         </a>
       </div>
-
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/index.html" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="/custom.html" class="nav-link px-2">Custom</a></li>
-        <li><a href="/produtos.html" class="nav-link px-2">Produtos</a></li>
-        <li><a href="/sobre.html" class="nav-link px-2">Sobre</a></li>
+        <li><a href="./index.html" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="./custom.html" class="nav-link px-2">Custom</a></li>
+        <li><a href="./produtos.html" class="nav-link px-2">Produtos</a></li>
+        <li><a href="./sobre.html" class="nav-link px-2">Sobre</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/contatoFab.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="./contatoFab.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Contato
           </a>
           <ul class="dropdown-menu dropdown-menu">
-            <li><a class="dropdown-item" href="/contatoLoja.html">Lojistas</a></li>
-            <li><a class="dropdown-item" href="/contatoEmp.html">Empresa</a></li>
+            <li><a class="dropdown-item" href="./contatoLoja.html">Lojistas</a></li>
+            <li><a class="dropdown-item" href="./contatoEmp.html">Empresa</a></li>
           </ul>
         </li>
       </ul>
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Criar conta</button>
+
+      <div class="col-md-3 text-end" id="login">
+        <a href="login.html">
+            <button type="button" class="btn btn-outline-primary me-2">Login</button>
+        </a>
+        <a href="register.html">
+            <button type="button" class="btn btn-primary">Criar conta</button>
+        </a>
+      </div>
+      <div class="col-md-3 text-end" id="sair">
+          <a onclick="Deslogar()">
+              <button type="button" class="btn btn-outline-primary me-2">Sair</button>
+          </a>
       </div>
     </header>
-
     <!-- CONTEUDO -->
     <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="logo">SUBSTITUIR</h1>
-          <p class="lead text-body-secondary">Embrace your individuality, step into style with In Sock's customized socks
-          </p>
+      <div class="row d-flex justify-content-center" id="pisca-pisca">
+        <div class="col d-flex justify-content-start">
+          <div class="meia-gira1 meia">
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <div class="banner-home">
+            <h1>
+              Não passe raiva,<br>
+                compre meias
+            </h1>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <div class="meia-gira2 meia">
+          </div>
         </div>
       </div>
     </section>
+    <div class="row featurette">
+      <div class="col-md-4">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+              height="500" src="./assets/images/cover1.png" role="img" aria-label="Placeholder: 500x500"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+              dy=".3em"></text></img>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-md-4">
+          <section class="py-5 text-center container">
+              <div class="row py-lg-5">
+                  <div class="col-lg-6 col-md-8 mx-auto">
+                      <h1 class="logo">IN SOCKS</h1>
+                      <p class="lead text-body-secondary">Embrace your individuality, step into style with In
+                          Sock's customized socks
+                      </p>
+                  </div>
+              </div>
+          </section>
+      </div>
+      <div class="col-md-4">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+              height="500" src="./assets/images/cover2.png" role="img" aria-label="Placeholder: 500x500"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+              dy=".3em"></text></img>
+      </div><!-- /.col-lg-4 -->
+  </div>
+  <hr class="featurette-divider">
+  <!-- HISTÓRIA -->
+  <section class="py-5 text container">
+      <div class="row py-lg-5">
+          <div class="col-lg-12 col-md-8 mx-auto">
+              <h1 class="logo">HISTÓRIA</h1>
+              <p class="lead text-body-secondary">Iniciamos no ramo de meias, há 13 anos e a 5 anos estamos com
+                  nossa marca InSocks, somos uma empresa familiar que sempre trabalhou na área têxtil. Prezamos
+                  pela qualidade, conforto e divertimento. Ao longo desses anos, estamos sempre buscando novos
+                  recursos, aprendendo e nos aperfeiçoando.<br>
+                  <br>
+                  Temos como principal objetivo ajudar VOCÊ, colorindo sua vida, com um produtos de qualidade,
+                  divertidos e diferenciados, com conforto e preços competitivos, está no lugar certo! Venha falar
+                  com a gente, teremos o maior prazer em ajudá-los!<br>
+          </div>
+      </div>
+  </section>
 
+  <!-- FRASE MEXENDO -->
+  <h1 class="logo" id="frase"></h1>
+  <!-- VIDEO -->
+  <div class="ratio ratio-16x9">
+      <iframe src="https://player.vimeo.com/video/737013334?h=fbd76eaf45" title="YouTube video" allow='autoplay'
+          allowfullscreen></iframe>
+  </div>
+  <!-- ARCOMEIAS -->
+  <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+              <img src="./assets/images/cover3.png" alt="cover3">
+          </div>
+      </div>
+  </section>
     <!-- RODAPÉ -->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <img class="logo" width="100" height="74" src="/assets/images/logo_Prancheta 1.svg">
+                    <img class="logo" width="100" height="74" src="./assets/images/logo_Prancheta 1.svg">
                         
                     </svg>
                 </a>
@@ -83,5 +163,4 @@
     </footer>
   </div>
 </body>
-
 </html>

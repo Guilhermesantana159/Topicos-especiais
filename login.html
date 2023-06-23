@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +11,10 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/script.js"></script>
 </head>
 
-<body>
+<body onload="OnInit()">
     <div class="container">
         <!-- CABEÇALHO -->
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -34,7 +34,7 @@
                 <li><a href="sobre.html" class="nav-link px-2">Sobre</a></li>
             </ul>
 
-            <div class="col-md-3 text-end">
+            <div class="col-md-3 text-end" id="login">
                 <a href="login.html">
                     <button type="button" class="btn btn-outline-primary me-2">Login</button>
                 </a>
@@ -42,12 +42,17 @@
                     <button type="button" class="btn btn-primary">Criar conta</button>
                 </a>
             </div>
+            <div class="col-md-3 text-end" id="sair">
+                <a onclick="Deslogar()">
+                    <button type="button" class="btn btn-outline-primary me-2">Sair</button>
+                </a>
+            </div>
         </header>
         <!-- CONTEÚDO -->
         <main class="main-login">
             <div class="login-container">
                 <h1>Login</h1>
-                <form>
+                <form onsubmit="Logar(event)">
                   <div class="form-group-login">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required>
@@ -56,7 +61,7 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group-login">
                     <button type="submit">Login</button>
                   </div>
                 </form>
