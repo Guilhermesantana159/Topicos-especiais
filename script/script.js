@@ -21,13 +21,19 @@ function OnInit(){
         document.getElementById('sair').style.display = "block";
     }
 
-    setInterval(function() {
-        document.getElementById('pisca-pisca').style.backgroundColor = cores[coreVez];
-        coreVez +=1;
+    if(document.getElementById('custom-card') != undefined){
+        document.getElementById('custom-card').style.backgroundColor = 'black';
+    }
 
-        if(coreVez > 1){
-            coreVez = 0;
-        }
+    setInterval(function() {
+        if(document.getElementById('pisca-pisca') != undefined){
+            document.getElementById('pisca-pisca').style.backgroundColor = cores[coreVez];
+            coreVez +=1;
+    
+            if(coreVez > 1){
+                coreVez = 0;
+            }
+        }        
     }, 100);
 };
 
@@ -68,6 +74,10 @@ function exibirProximaFrase() {
     fraseElement.textContent = frases[index];
     index = (index + 1) % frases.length;
 }
+
+function ChangeColor(){
+    document.getElementById('custom-card').style.backgroundColor = document.getElementById('color').value;
+} 
 
 // Exibe a primeira frase
 exibirProximaFrase();

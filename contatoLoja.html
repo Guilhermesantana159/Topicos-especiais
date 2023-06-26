@@ -16,13 +16,13 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/socks.png">
 </head>
 
-<body>
+<body onload="OnInit()">
     <div class="container">
         <!-- CABEÇALHO -->
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <div class="col-md-3 mb-2 mb-md-0">
-                <a href="/index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
-                  <img src="/assets/images/logo-png-01.png" alt="Logo" width="150" height="50">
+                <a href="./index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+                  <img src="./assets/images/logo-png-01.png" alt="Logo" width="150" height="50">
                 </a>
             </div>
 
@@ -41,10 +41,19 @@
                   </ul>
                 </li>
             </ul>
-              <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                <button type="button" class="btn btn-primary">Criar conta</button>
-              </div>
+            <div class="col-md-3 text-end" id="login">
+              <a href="login.html">
+                  <button type="button" class="btn btn-outline-primary me-2">Login</button>
+              </a>
+              <a href="register.html">
+                  <button type="button" class="btn btn-primary">Criar conta</button>
+              </a>
+            </div>
+            <div class="col-md-3 text-end" id="sair">
+                <a onclick="Deslogar()">
+                    <button type="button" class="btn btn-outline-primary me-2">Sair</button>
+                </a>
+            </div>
         </header>
         <!-- CONTEÚDO -->
         <section class="py-5 text container">
@@ -100,7 +109,7 @@
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
               <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <img class="logo" width="150" height="50" src="/assets/images/logo-cinza-png-01-01.png">
+                <img class="logo" width="150" height="50" src="./assets/images/logo-cinza-png-01-01.png">
             </a>
                 <span class="mb-3 mb-md-0 text-muted">© 2023</span>
             </div>
